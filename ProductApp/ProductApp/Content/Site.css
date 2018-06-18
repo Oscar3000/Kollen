@@ -1,0 +1,159 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    position:relative;
+    top:-40px;
+}
+
+
+nav a:hover{
+    border-top:1px solid white;   
+}
+.Logo{
+    height:4.5rem;
+}
+
+.pr1{
+    padding-right:0.4rem;
+}
+
+.pr2{
+    padding-right:2.3rem;
+}
+
+.pl1{
+    padding-left:0.4rem;
+}
+
+.pl2{
+    padding-left:2.3rem;
+}
+
+.pb1{
+    padding-bottom:10px !important;
+}
+
+.pb2{
+    padding-bottom:20px !important;
+}
+
+.pb3{
+    padding-bottom:30px !important;
+}
+
+.mt1{
+    margin-top:10px;
+}
+
+.mt2{
+    margin-top:20px;
+}
+
+.mt3{
+    margin-top:30px !important;
+}
+
+.mt4{
+    margin-top:50px !important;
+}
+
+.mb1{
+    margin-bottom:10px;
+}
+
+.mb2{
+    margin-bottom:20px;
+}
+
+.mb3{
+    margin-bottom:30px !important;
+}
+
+.mb4{
+    margin-bottom:50px !important;
+}
+
+.my1{
+    margin:10px auto;
+}
+
+.my2{
+    margin:20px auto;
+}
+
+.my3{
+    margin:30px auto !important;
+}
+
+.my4{
+    margin-bottom:50px auto !important;
+}
+
+.text-center{
+    margin:auto;
+    text-align:center;
+}
+
+.text-uppercase{
+    text-transform:uppercase;
+}
+
+.text-content{
+    font-family: 'Amiri', serif;
+    font-size:25px;
+}
+
+.footer-content{
+    font-family: 'Amiri', serif;
+    font-size:20px;
+}
+
+@media(max-width:700px){
+    .text-content{
+        font-size:18px;
+    }
+    .section3{
+        background-attachment:unset;
+    }
+}
+
+@media(max-width:1024px){
+    #facebook{
+        margin-bottom:10px;
+    }
+}
+
+
+.section1{
+    background: url("../Images/Full.jpg") center top no-repeat ;
+    min-height:600px;
+    background-size:cover;
+}
+
+.section3{
+    background: url("../Images/ol.jpg") center top no-repeat ;
+    min-height:500px;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.page-footer .footerLink{
+    padding: 0px 10px;
+    font-family: 'Amiri', serif;
+    font-size:20px;
+}
+
+
+.social-item{
+    margin:0 .5rem;
+    display:inline;
+}
+
+
+.social-item > a:hover{
+    top:5px;
+    position:relative;
+}
+
+.btn.disabled{
+    cursor:no-drop !important;
+}

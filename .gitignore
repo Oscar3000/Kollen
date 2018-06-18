@@ -1,0 +1,14 @@
+/ProductApp/ProductApp/bin
+/ProductApp/ProductApp/obj
+/ProductApp/.vs/ProductApp/v14/*.suo
+/ProductApp/ProductApp/*user
+/ProductApp/.vs/config
+
+/ProductApp/packages
+
+
+# User-specific files
+*.suo
+*.user
+
+/ProductApp/ProductApp/.Connections.config

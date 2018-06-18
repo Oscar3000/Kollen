@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="~/Images/14992610-9191-47d3-92cb-fc4ce020b1ea.png" type="image/x-icon" />
+    <title>@ViewBag.Title | Kollen Store</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
+    @*@Styles.Render("~/Content/materialize")*@
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet"> 
+    <link type="text/css" rel="stylesheet" href="~/Content/materialize/css/materialize.min.css" media="screen,projection" />
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper light-blue accent-1">
+                <div class="brand-logo pl2">
+                    <a href="@Url.Action("index","Home")">
+                        <img src="~/Images/e9f57c8c-fa71-41f9-9713-38a2ed187f5c.png" class="Logo white-text" />
+                    </a>
+                </div>
+                <a href="#" data-target="navdrop" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <div class="right hide-on-med-and-down">
+                    <form>
+                        <div class="input-field center">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+
+                </div>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="@Url.Action("Index","Home")"><i class="fas fa-home pr1"></i>Home</a></li>
+                    <li><a href="@Url.Action("About","Home")"><i class="fas fa-history pr1"></i>About</a></li>
+                    <li><a href="#"><i class="fas fa-truck pr1"></i>Shop</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart pr1"></i>Cart</a></li>
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+        </nav>
+        </div>
+        <ul class="sidenav" id="navdrop">
+            <li><a href="@Url.Action("Index","Home")"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="@Url.Action("About","Home")"><i class="fas fa-history"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-truck"></i>Shop</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+            @Html.Partial("_LoginPartial")
+        </ul>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="page-footer accent-1 light-blue">
+            <div class="row">
+                <div class="col l4 m4 s12 center">
+                    <img src="~/Images/14992610-9191-47d3-92cb-fc4ce020b1ea.png" />
+                    <ul class="footerLink">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">We are Hiring!</a></li>
+                    </ul>
+                </div>
+                <div class="col l4 m4 s12">
+                    <div>
+                        <h5 class="text-uppercase">Style</h5>
+                        <div class="footer-content">
+                            <div>
+                                Kollen is a High brand store where beautifully designed clothes are sold.
+                            </div>
+                            <div class="mt3">
+                                Kollen store is a place where all type of clothing accessories from clothes to bags t shoes and even jewelries are made and designed by Kollen.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l4 m4 s12">
+                    <h5 class="text-uppercase">Subscribe</h5>
+                    <div class="footer-content mt3">Get monthly updates and free resources. </div>
+                    <div class="mt2">
+                        @*Make this a form*@
+                        <div class="row">
+                            <div class="col s12 m6 l6">
+                                <div class="input-field">
+                                    <input id="subscribe" type="email" class="validate white-text" />
+                                    <label class="white-text" for="email">Email</label>
+                                    <span class="helper-text" data-error="Enter a valid email"></span>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l6 mt3">
+                                <button class="btn waves-effect waves-green white green-text">
+                                    Subscribe
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt2">
+                        <h5 class="text-uppercase">
+                            Connect with us
+                        </h5>
+                        <div class="socialList mt1">
+                            <div class="social-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook fa-2x white-text"></i>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <i class="fab fa-youtube fa-2x white-text"></i>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <i class="fab fa-instagram fa-2x white-text"></i>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter fa-2x white-text"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="footer-copyright">
+            <p class="text-center">&copy; @DateTime.Now.Year - Kollen store-All Rights Reserved</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/materialize")
+    @Scripts.Render("~/Script/Site")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

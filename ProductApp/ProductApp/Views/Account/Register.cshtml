@@ -1,0 +1,63 @@
+﻿@model ProductApp.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+
+<div class="container mt4">
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+       <div class="row center-block">
+           <div class="col s12 offset-l3 l6 offset-m2 m8 blue accent-1 z-depth-3 pb2">
+               <h3 class="center">Sign Up Form</h3>
+               <hr class="mt1" />
+               @Html.ValidationSummary("", new { @class = "red-text center mb2" })
+               <br />
+               <div class="input-field">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "validate white-text" })
+                    @Html.LabelFor(m => m.Email, new { @class = "white-text" })
+               </div>
+               <div class="input-field">
+                   @Html.PasswordFor(m => m.Password, new { @class = "validate white-text" })
+                   @Html.LabelFor(m => m.Password, new { @class = "white-text" })
+               </div>
+               <div class="input-field">
+                   @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "validate white-text" })
+                   @Html.LabelFor(m => m.ConfirmPassword, new { @class = "white-text" })
+               </div>
+               <div>
+                   <label for="chkBox">
+                       <input type="checkbox" onchange="return EnableButton(this)" id="chkBox"/>
+                       <span class="white-text">By clicking on  this button you agree with ours <a href="#" class="red-text">terms and policy</a></span>
+                   </label>
+               </div>
+               <div class="my2 mb2">
+                   <button class="btn waves-effect waves-green right btn-large white black-text disabled" type="submit" id="button">
+                       Submit
+                       <i class="material-icons  black-text right">send</i>
+                   </button>
+               </div>
+           </div>
+       </div>
+    }
+    @*<div class="row center">
+        <div class="col s12 center">
+            <h2>OR</h2>
+        </div>
+    </div>
+    <div class="row center-block">
+        <div class="col s12 offset-l2 l8 offset-m2 m8 mt2 center">
+            <button class="waves-effect waves-light btn-large blue" id="facebook">
+             <i class="fab fa-facebook pr1"></i> Sign up with Facebook
+            </button>
+            <button class="waves-effect waves-light btn-large red">
+                <i class="fab fa-google pr1"></i> Sign up with Google
+            </button>
+        </div>
+    </div>*@
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
